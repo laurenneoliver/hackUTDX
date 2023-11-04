@@ -38,9 +38,9 @@ header{
     box-shadow: var(--primary-shadow);
     position: absolute;
 }
-header img{width: 50px;height: 50px;}
-header .image{position: relative;left: 43%; top: 15%;}
-header .line{width: 2px;height: 50px;background: #000;position: relative;left: 47%;top: -62%;border-radius: 50px;}
+header img{width: 124px;height: 70px;}
+header .image{position: relative; top: 0%;}
+header .line{width: 2px;height: 65px;background: #000;position: relative;left: 47%;top: -100%;border-radius: 50px;}
 header .text{
     font-family: font-family: 'Helvetica Neue Condensed Bold Italic', sans-serif;;
     font-size: 30px;
