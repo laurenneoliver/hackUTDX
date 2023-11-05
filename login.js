@@ -4,6 +4,7 @@ var loginform = document.getElementById("login-form");
 var signupform = document.getElementById("signup-form");
 signupform.style.display = "none";
 
+
 function signupForm(){
     loginform.style.display="none";
     signupform.style.display = "block";
@@ -67,8 +68,24 @@ signupform.addEventListener('submit',(e) =>{
   var email= document.getElementById("email").value;
   var pass =document.getElementById("password").value;
   var name =document.getElementById("name").value;
+  var yearsInBusiness =document.getElementById("yearsInBusiness").value;
+  var companyCategory =document.getElementById("companyCategory").value;
+  var companySize =document.getElementById("companySize").value;
   var user = firebase.auth().currentUser;
-  
+  db.collection("users").add({
+    email: email,
+    name: name,
+    yearsInBusiness: yearsInBusiness,
+    companyCategory: companyCategory,
+    companySize: companySize,
+
+     
+  }).then((docRef) => {
+    console.log('User signed up successfully!',docRef);
+    // Handle follow-up action (e.g., redirect to login page or clear form)
+  }).catch((error) => {
+    console.error('Error signing up:', error);
+  });
   firebase.auth().createUserWithEmailAndPassword(email,pass).then(cred => {
 
   });
