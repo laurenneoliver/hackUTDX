@@ -20,7 +20,7 @@ firebase.auth().onAuthStateChanged(function(user) {
       // User is signed in.
       document.getElementById("loginform").style.display="none";
       change();
-      window.location.href="index.html";
+      window.location.href="profile.html";
     } else {
       // No user is signed in.
       document.getElementById("loginform").style.display="block";
