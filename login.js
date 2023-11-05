@@ -72,14 +72,12 @@ signupform.addEventListener('submit',(e) =>{
   var companyCategory =document.getElementById("companyCategory").value;
   var companySize =document.getElementById("companySize").value;
   var user = firebase.auth().currentUser;
-  db.collection("users").add({
-    email: email,
-    name: name,
+  set(ref(db,"People/" + user),{
+    Email: email,
+    Name: name,
     yearsInBusiness: yearsInBusiness,
     companyCategory: companyCategory,
     companySize: companySize,
-
-     
   }).then((docRef) => {
     console.log('User signed up successfully!',docRef);
     // Handle follow-up action (e.g., redirect to login page or clear form)
