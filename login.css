@@ -42,7 +42,7 @@ header img{width: 124px;height: 70px;}
 header .image{position: relative; top: 0%;}
 header .line{width: 2px;height: 65px;background: #000;position: relative;left: 47%;top: -100%;border-radius: 50px;}
 header .text{
-    font-family: font-family: 'Impact', sans-serif;;
+    font-family: font-family: 'Impact', sans-serif;
     font-size: 30px;
     position: absolute;
     left: 48%;
@@ -56,12 +56,12 @@ header .ii{font-family: var(--take);position: absolute;left: 48%;top: 40px;}
     justify-content: center;
     align-items: center;
     height: 98%;
-    max-height: 610px;
+    max-height: 100%;
 }
 
 .container .panel{
     width: 60%;
-    height: 72%;
+    height: 100%;
     box-shadow: var(--primary-gradient);
 }
 
@@ -197,8 +197,9 @@ form .btn-signup{
 
 form{
     height: 55%;
-    max-height: 280px;
+    max-height: 300px;
     margin-top: 5.5rem;
+    overflow: auto;
 }
 
 form h3, form h6{
